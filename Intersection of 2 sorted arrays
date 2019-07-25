@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+	//code
+	int m,n;
+	scanf("%d %d",&m,&n);
+	int A[m],B[n];
+	for(int i=0;i<m;i++)
+	scanf("%d",&A[i]);
+	for(int j=0;j<n;j++)
+	scanf("%d",&B[j]);
+	int i=0,j=0,k=0;
+	int* arr=(int*)malloc(m*sizeof(int));
+	while(i<m && j<n)
+	{
+	    if(A[i]<B[j])
+	    i++;
+	    else if(A[i]>B[j])
+	    j++;
+	    else
+	    {
+	        arr[k++]=A[i];
+	        i++;
+	        j++;
+	    }
+	}
+	for(int l=0;l<k;l++)
+	printf("%d",arr[l]);
+	return 0;
+}
