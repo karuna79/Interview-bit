@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	//code
+	int A;
+	scanf("%d",&A);
+int k,rev=0,rem;
+    k=A;
+int count=0;
+    while(A!=0)
+    {
+      rem=A%10;
+      rev=rev*10+rem;
+      A/=10;
+      count++;
+    }
+    if(rev==k)
+    printf("palindrome");
+    else
+    printf("not");
+}
